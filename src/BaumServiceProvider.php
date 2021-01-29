@@ -58,6 +58,7 @@ class BaumServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
+                Console\MakeMigrationCommand::class,
                 Console\MakeModelCommand::class,
                 Console\VersionCommand::class
             ]);
